@@ -1,43 +1,43 @@
 <?php
 
 /**
- * Plugin Name: Breakdance Custom Elements
- * Plugin URI: https://breakdance.com/
+ * Plugin Name: MakeMSP Custom Elements
+ * Plugin URI: https://makemsp.com
  * Description: Boilerplate plugin to save your custom elements created with Element Studio.
- * Author: Breakdance
- * Author URI: https://breakdance.com/
+ * Author: MakeMSP
+ * Author URI: https://makemsp.com/
  * License: GPLv2
- * Text Domain: breakdance
+ * Text Domain: makemsp
  * Domain Path: /languages/
  * Version: 0.0.1
  */
 
-namespace BreakdanceCustomElements;
+namespace MakemspCustomElements;
 
 use function Breakdance\Util\getDirectoryPathRelativeToPluginFolder;
 
 add_action('breakdance_loaded', function () {
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/elements',
-        'BreakdanceCustomElements',
+        'MakemspCustomElements',
         'element',
-        'Custom Elements',
+        'MakeMSP Elements',
         false
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/macros',
-        'BreakdanceCustomElements',
+        'MakemspCustomElements',
         'macro',
-        'Custom Macros',
+        'MakeMSP Macros',
         false,
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/presets',
-        'BreakdanceCustomElements',
+        'MakemspCustomElements',
         'preset',
-        'Custom Presets',
+        'MakeMSP Presets',
         false,
     );
 },
